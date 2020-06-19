@@ -32,9 +32,9 @@ class App extends Component {
       countries.push(resCountries.data.countries[i].name);
   }
     this.setState({
-      confirmed: resApi.data.confirmed.value,
-      recovered: resApi.data.recovered.value,
-      deaths: resApi.data.deaths.value,
+      confirmed: resApi.data.confirmed.value.toLocaleString(navigator.language, { minimumFractionDigits: 0 }),
+      recovered: resApi.data.recovered.value.toLocaleString(navigator.language, { minimumFractionDigits: 0 }),
+      deaths: resApi.data.deaths.value.toLocaleString(navigator.language, { minimumFractionDigits: 0 }),
       countries
     })
   }
@@ -48,9 +48,9 @@ class App extends Component {
     try {
     const res = await Axios.get(`https://covid19.mathdro.id/api/countries/${e.target.value}`);
     this.setState({
-      confirmed: res.data.confirmed.value,
-      recovered: res.data.recovered.value,
-      deaths: res.data.deaths.value
+      confirmed: res.data.confirmed.value.toLocaleString(navigator.language, { minimumFractionDigits: 0 }),
+      recovered: res.data.recovered.value.toLocaleString(navigator.language, { minimumFractionDigits: 0 }),
+      deaths: res.data.deaths.value.toLocaleString(navigator.language, { minimumFractionDigits: 0 })
     })
   } catch(err) {
     if(err.response.status === 404)

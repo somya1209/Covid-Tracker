@@ -13,11 +13,11 @@ import {
 class Cards extends Component {
   render() {
     return (
-      <Container className="flex" style={{  display: 'flex',
+      <Container className="flex" >
+        <Row style={{  display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        flexWrap: 'wrap',marginLeft: 200, marginTop: 20 }}>
-        <Row>
+        flexWrap: 'wrap',marginTop: 20 }}>
           <Col md={3}>
             <Card className="box"
               style={{
