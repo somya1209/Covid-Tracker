@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-ro
 import WorldDataPage from '../Pages/WorldDataPage'
 import IndiaDtaPage from '../Pages/IndiaDataPage'
 import WHOGuidelenes from '../Pages/WHOGuidelinesPage'
+import NewsPage from '../Pages/NewsPage'
 import NoMatch from '../Pages/NoMatch'
 function Navigation() {
     return (
@@ -17,10 +18,11 @@ function Navigation() {
     <div class="sidebar">
       <header>Covid19 Tracker</header>
       <ul>
-      <li><a href="/world"><i class="fa fa-globe"></i>WORLD</a></li>
-      <li><a href="/india"><i class="fa fa-home"></i>INDIA</a></li>
+      <li><a href="/"><i class="fa fa-globe"></i>Home</a></li>
+      <li><a href="/india"><i class="fa fa-home"></i>IndiaLive</a></li>
       
       <li><a href="/guidelines"><i class="fa fa-info"></i>WHO</a></li>
+      <li><a href="/news"><i class="fa fa-info"></i>News</a></li>
       
   
       </ul>
@@ -29,9 +31,10 @@ function Navigation() {
   <Router>
       <Switch>
                
-          <Route exact="true" path="/world" component={WorldDataPage} />
+          <Route exact="true" path="/" component={WorldDataPage} />
           <Route exact="true" path="/india" component={IndiaDtaPage} />
           <Route exact="true" path="/guidelines" component={WHOGuidelenes} />
+          <Route exact="true" path="/news" component={NewsPage} />
           <Route   component={NoMatch} />
         
         </Switch>
