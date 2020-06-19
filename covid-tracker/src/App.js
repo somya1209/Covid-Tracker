@@ -7,10 +7,17 @@ import Axios from "axios";
 
 class App extends Component {
 
+  constructor(props) {
+    super(props);
+
+    this.getCountryData = this.getCountryData.bind(this);
+  }
+
   state = {
     confirmed: 0,
     recovered: 0,
-    deaths: 0
+    deaths: 0,
+    countries: []
   }
 
   componentDidMount() {
@@ -18,16 +25,49 @@ class App extends Component {
   }
 
   async getData() {
-    const res = await Axios.get("https://covid19.mathdro.id/api");
+    const resApi = await Axios.get("https://covid19.mathdro.id/api");
+    const resCountries = await Axios.get("https://covid19.mathdro.id/api/countries");
+    const countries=[];
+    for(var i = 0; i < resCountries.data.countries.length; i++){
+      countries.push(resCountries.data.countries[i].name);
+  }
     this.setState({
-      confirmed: res.data.confirmed.value,
-      recovered: res.data.recovered.value,
-      deaths: res.data.deaths.value,
+      confirmed: resApi.data.confirmed.value,
+      recovered: resApi.data.recovered.value,
+      deaths: resApi.data.deaths.value,
+      countries
     })
   }
 
-  renderCountryOptions() {
+  async getCountryData(e) {
 
+    if(e.target.value === 'Global')
+    {
+      return this.getData();
+    }
+    try {
+    const res = await Axios.get(`https://covid19.mathdro.id/api/countries/${e.target.value}`);
+    this.setState({
+      confirmed: res.data.confirmed.value,
+      recovered: res.data.recovered.value,
+      deaths: res.data.deaths.value
+    })
+  } catch(err) {
+    if(err.response.status === 404)
+    this.setState({
+      confirmed: 'Data Unavailable',
+      recovered: 'Data Unavailable',
+      deaths: 'Data Unavailable'
+    })
+    console.log(err.response);
+  }
+  }
+
+  renderCountryOptions() {
+    return this.state.countries.map((country, i) => {
+      return <option key={i}>{country}</option>
+  
+    });
   }
 
 
@@ -35,15 +75,14 @@ class App extends Component {
     return (
       <div className="App">
         <center>
-          <h1 style={{ marginTop: 10, fontFamily: "Monospace", fontSize: 50 }}>
-            <img
+          <h1 style={{ marginTop: 10, fontFamily: "Arial, Helvetica, sans-serif", fontSize: 50 }}>
+            C <img
               src={image}
               alt="COVID-19"
-              style={{ height: 70, width: 70, position: "relative" }}
-            />{" "}
-            COVID-19 Tracker
+              style={{ height: 50, width: 50, position: "relative" }}
+            /> VID-19 Tracker
           </h1>
-          <SearchCountry searchCountry={this.renderCountryOptions}/>
+          <SearchCountry CountryOptions={this.renderCountryOptions()} CountryData={this.getCountryData}/>
         </center>
         <Cards confirmed={this.state.confirmed} recovered={this.state.recovered} deaths={this.state.deaths}/>
       </div>

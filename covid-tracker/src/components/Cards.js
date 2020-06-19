@@ -13,10 +13,13 @@ import {
 class Cards extends Component {
   render() {
     return (
-      <Container style={{ marginLeft: 200, marginTop: 50 }}>
+      <Container className="flex" style={{  display: 'flex',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        flexWrap: 'wrap',marginLeft: 200, marginTop: 20 }}>
         <Row>
           <Col md={3}>
-            <Card
+            <Card className="box"
               style={{
                 borderBottomColor: "rgba(102, 255, 102, 0.8)",
                 borderBottomWidth: 20,
