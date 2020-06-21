@@ -3,7 +3,7 @@ import Cards from '../Cards';
 import SearchCountry from "../SearchCountry";
 
 import Axios from "axios";
-import image from '../../assets/logo.png'
+
 class WorldData extends Component {
 
   constructor(props) {
@@ -74,13 +74,13 @@ class WorldData extends Component {
     return (
       <div className="App">
         <center>
-          <h1 style={{ marginTop: 10, fontFamily: "Arial, Helvetica, sans-serif", fontSize: 50 }}>
+          {/* <h1 style={{ marginTop: 10, fontFamily: "Arial, Helvetica, sans-serif", fontSize: 50 }}>
             C <img
               src={image}
               alt="COVID-19"
               style={{ height: 50, width: 50, position: "relative" }}
             /> VID-19 Tracker
-          </h1>
+          </h1> */}
           <SearchCountry CountryOptions={this.renderCountryOptions()} CountryData={this.getCountryData}/>
         </center>
         <Cards confirmed={this.state.confirmed} recovered={this.state.recovered} deaths={this.state.deaths}/>
