@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Cards from '../Cards';
 import SearchCountry from "../SearchCountry";
-
 import Axios from "axios";
 
 class WorldData extends Component {
@@ -16,11 +15,12 @@ class WorldData extends Component {
     confirmed: 0,
     recovered: 0,
     deaths: 0,
-    countries: []
+    countries: [],
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     this.getData();
+   
   }
 
   async getData() {
@@ -81,9 +81,9 @@ class WorldData extends Component {
               style={{ height: 50, width: 50, position: "relative" }}
             /> VID-19 Tracker
           </h1> */}
-          <SearchCountry CountryOptions={this.renderCountryOptions()} CountryData={this.getCountryData}/>
+          <SearchCountry CountryOptions={this.renderCountryOptions()} CountryData={this.getCountryData} />
         </center>
-        <Cards confirmed={this.state.confirmed} recovered={this.state.recovered} deaths={this.state.deaths}/>
+        <Cards confirmed={this.state.confirmed} recovered={this.state.recovered} deaths={this.state.deaths} />
       </div>
     );
   }

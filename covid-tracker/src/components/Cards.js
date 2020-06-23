@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {useState, useEffect } from "react";
 import {
   Card,
   CardText,
@@ -9,10 +9,65 @@ import {
   Row,
   Container,
 } from "reactstrap";
+import { Line } from 'react-chartjs-2';
+import Axios from 'axios'
 
-class Cards extends Component {
-  render() {
-    return (
+const url = 'https://covid19.mathdro.id/api';
+const fetchDailyData = async () => {
+  try {
+    const { data } = await Axios.get(`${url}/daily`);
+
+   return data.map(({ confirmed,recovered, deaths, reportDate: date }) => ({ confirmed: confirmed.total,recovered: recovered.total, deaths: deaths.total, date }));
+  } catch (error) {
+    return error;
+  }
+};
+
+
+const Cards = (props) => {
+  const [dailyData, setDailyData] = useState({});
+useEffect(() => {
+  const fetchMyAPI = async () => {
+    const initialDailyData = await fetchDailyData();
+
+    setDailyData(initialDailyData);
+  };
+
+  fetchMyAPI();
+}, []);
+
+const lineChart = (
+  dailyData[0] ? (
+    <Line
+      data={{
+        labels: dailyData.map(({ date }) => date),
+        datasets: [{
+          data: dailyData.map((data) => data.confirmed),
+          label: 'Infected',
+          borderColor: 'rgb(102, 255, 102)',
+          fill: true,
+        },{
+          data: dailyData.map((data) => data.recovered),
+          label: 'Recovered',
+          borderColor: 'rgb(255, 255, 102)',
+          fill: true,
+        }, {
+          data: dailyData.map((data) => data.deaths),
+          label: 'Deaths',
+          borderColor: 'rgb(255, 102, 102)',
+          backgroundColor: 'rgba(255, 102, 102, 0.8)',
+          fill: true,
+        },
+        ],
+      }}
+    />
+  ) : null
+);
+
+  return (
+    
+  
+
       <Container className="flex" >
         <Row style={{  display: 'flex',
         justifyContent: 'space-evenly',
@@ -24,13 +79,14 @@ class Cards extends Component {
                 borderBottomColor: "rgba(102, 255, 102, 0.8)",
                 borderBottomWidth: 20,
                 borderRadius: "20px",
-                margin: '1em'
+                margin: '1em',
+                boxShadow: "0px 10px 20px #555",
               }}
             >
               <CardBody>
                 <CardTitle>Infected</CardTitle>
                 <CardSubtitle>
-                  <h2>{this.props.confirmed}</h2>
+                  <h2>{props.confirmed}</h2>
                 </CardSubtitle>
                 <CardText>
                   <p>{new Date().toDateString()}</p>
@@ -45,13 +101,14 @@ class Cards extends Component {
                 borderBottomColor: "rgba(255, 255, 102, 0.8)",
                 borderBottomWidth: 20,
                 borderRadius: "20px",
-                margin: '1em'
+                margin: '1em',
+                boxShadow: "0px 10px 20px #555",
               }}
             >
               <CardBody>
                 <CardTitle>Recovered</CardTitle>
                 <CardSubtitle>
-                  <h2>{this.props.recovered}</h2>
+                  <h2>{props.recovered}</h2>
                 </CardSubtitle>
                 <CardText>
                   <p>{new Date().toDateString()}</p>
@@ -66,13 +123,14 @@ class Cards extends Component {
                 borderBottomColor: "rgba(255, 102, 102, 0.8)",
                 borderBottomWidth: 20,
                 borderRadius: "20px",
-                margin: '1em'
+                margin: '1em',
+                boxShadow: "0px 10px 20px #555",
               }}
             >
               <CardBody>
                 <CardTitle>Deaths</CardTitle>
                 <CardSubtitle>
-                  <h2>{this.props.deaths}</h2>
+                  <h2>{props.deaths}</h2>
                 </CardSubtitle>
                 <CardText>
                   <p>{new Date().toDateString()}</p>
@@ -82,9 +140,16 @@ class Cards extends Component {
             </Card>
           </Col>
         </Row>
+<div>
+  <br/>
+  <center><h3>Global Data</h3></center>
+  <br/>
+  {lineChart}</div>
+       
       </Container>
+
     );
   }
-}
+
 
 export default Cards;
