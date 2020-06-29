@@ -30,8 +30,8 @@ function Navigation() {
       <li><a href="/india"><i className="fa fa-map-pin"></i>IndiaLive</a></li>
       <li><a href="/globe"><i className="fa fa-globe"></i>GlobeView</a></li>
       <li><a href="/guidelines"><i className="fa fa-info"></i> WHO</a></li>
-      <li><a href="/news"><i className="fa fa-newspaper-o"></i>News</a></li>
-      <li><a href="/news2"><i className="fa fa-newspaper-o"></i>News2</a></li>
+      {/* <li><a href="/news"><i className="fa fa-newspaper-o"></i>News</a></li> */}
+      <li><a href="/news2"><i className="fa fa-newspaper-o"></i>News</a></li>
       
   
       </ul>

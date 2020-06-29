@@ -25,14 +25,14 @@ class IndiaDataPage extends Component {
     return (
       <div>
         <center>
-          <h1
+          <h2
             style={{
-              color: "#042331",
+              color: "#063146",
               fontWeight: 600,
             }}
           >
-            Statewise Data
-          </h1>
+            Statewise Data - INDIA
+          </h2>
           <br />
           <table
             width="1050"
@@ -44,7 +44,7 @@ class IndiaDataPage extends Component {
           >
             <tr
               style={{
-                backgroundColor: "#EE304C",
+                backgroundColor: "#063146",
               }}
             >
               <td

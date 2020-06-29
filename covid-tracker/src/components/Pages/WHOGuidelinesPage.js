@@ -19,15 +19,15 @@ import '../image-container.css'
 function WHOGuidelinesPage() {
   return (
     <Container className="flex">
-      <div style={{ color: "#042331" }}>
+      <div>
         {/*  <center>
         <h1>WHO Guidelines</h1>
         </center> */}
         <div className="ml-5 mr-5">
           <br />
-          <h3 style={{ textAlign: "center" }}>COVID-19 Outbreak</h3>
+          <h2 style={{ textAlign: "center", color: "#063146" }}>COVID-19 Outbreak</h2>
           <br />
-          <h4 style={{ textAlign: "left", marginLeft: 100 }}>
+          <h4 style={{ textAlign: "left", marginLeft: 100, color: "#063146" }}>
             What is COVID-19?
           </h4>
           <img
@@ -49,6 +49,7 @@ function WHOGuidelinesPage() {
               marginLeft: 100,
               marginRight: 100,
               lineHeight: 2,
+              color: "#063146"
             }}
           >
             Coronavirus disease (COVID-19) is an infectious disease caused by a
@@ -72,6 +73,7 @@ function WHOGuidelinesPage() {
               marginLeft: 100,
               marginRight: 100,
               lineHeight: 2,
+              color: "#063146"
             }}
           >
             A novel coronavirus (nCoV) is a new strain that has not been
@@ -92,6 +94,7 @@ function WHOGuidelinesPage() {
               marginLeft: 100,
               marginRight: 100,
               lineHeight: 2,
+              color: "#063146"
             }}
           >
             Coronavirus disease 2019 (COVID-19) was first identified amid an
@@ -105,7 +108,7 @@ function WHOGuidelinesPage() {
           <Button
             href="http://www.emro.who.int/health-topics/corona-virus/index.html"
             target="blank"
-            style={{ backgroundColor: "#EE304C", border: 0, marginLeft: 100 }}
+            style={{ backgroundColor: "#063146", border: 0, marginLeft: 100 }}
           >
             Read More
           </Button>
@@ -113,7 +116,7 @@ function WHOGuidelinesPage() {
         <div>
           <br />
           <hr />
-          <h3 className="ml-5 mr-5" style={{ textAlign: "center" }}>Symptoms</h3>
+          <h3 className="ml-5 mr-5" style={{ textAlign: "center", color: "#063146" }}>Symptoms</h3>
           <Row style={{  display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'center',
@@ -129,7 +132,7 @@ function WHOGuidelinesPage() {
               marginBottom: 10
             }}
           />
-	   <p  style={{textAlign: 'center'}} >Fever</p>
+	   <p  style={{textAlign: 'center', color: "#063146"}} >Fever</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -142,7 +145,7 @@ function WHOGuidelinesPage() {
               marginBottom: 10
             }}
           />
-	   <p style={{textAlign: 'center'}}>Cold</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Cold</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -155,7 +158,7 @@ function WHOGuidelinesPage() {
               marginBottom: 10
             }}
           />
-	   <p style={{textAlign: 'center'}}>Headaches</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Headaches</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -168,7 +171,7 @@ function WHOGuidelinesPage() {
               marginBottom: 10
             }}
           />
-	   <p style={{textAlign: 'center'}}>Cough</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Cough</p>
           </Col>
           </Row>
           <Row style={{  display: 'flex',
@@ -186,7 +189,7 @@ function WHOGuidelinesPage() {
               marginBottom: 10
             }}
           />
-	   <p style={{textAlign: 'center'}}>Fatigue</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Fatigue</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -199,7 +202,7 @@ function WHOGuidelinesPage() {
               paddingBottom: 10
             }}
           />
-           <p style={{textAlign: 'center'}}>Naussea</p>
+           <p style={{textAlign: 'center', color: "#063146"}}>Naussea</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -212,7 +215,7 @@ function WHOGuidelinesPage() {
               marginBottom: 10,
             }}
           />
-	   <p style={{textAlign: 'center'}}>Diarrhea</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Diarrhea</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -225,14 +228,14 @@ function WHOGuidelinesPage() {
               marginBottom: 10,
             }}
           />
-	   <p style={{textAlign: 'center'}}>Difficulty Breathing</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Difficulty Breathing</p>
           </Col>
           </Row>
         </div>
         <div className="ml-5 mr-5">
           <br />
           <hr />
-          <h3 style={{ textAlign: "center" }}>Preventive Measures</h3>
+          <h3 style={{ textAlign: "center", color: "#063146" }}>Preventive Measures</h3>
 	  <Row style={{  display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'center',
@@ -248,7 +251,7 @@ function WHOGuidelinesPage() {
               marginBottom: 20
             }}
           />
-	   <p style={{textAlign: 'center'}}>Stay Home, Stay Safe. Self isolate from others if you feel unwell.</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Stay Home, Stay Safe. Self isolate from others if you feel unwell.</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -261,7 +264,7 @@ function WHOGuidelinesPage() {
               marginBottom: 15,
             }}
           />
-	   <p style={{textAlign: 'center'}}>Wash your hands reguraly 
+	   <p style={{textAlign: 'center', color: "#063146"}}>Wash your hands reguraly 
 	   for 20 seconds with soap and water</p>
           </Col>
           <Col md={3}>
@@ -275,7 +278,7 @@ function WHOGuidelinesPage() {
               marginBottom: 15,
             }}
           />
-	   <p style={{textAlign: 'center'}}>Cover your mouth and nose with masks when outside.</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Cover your mouth and nose with masks when outside.</p>
           </Col>
           </Row>
           <Row style={{  display: 'flex',
@@ -293,7 +296,7 @@ function WHOGuidelinesPage() {
               marginBottom: 20
             }}
           />
-	   <p style={{textAlign: 'center'}}>Stay informed and follow the recommended practices.</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Stay informed and follow the recommended practices.</p>
           </Col>
           <Col md={3}>
           <img  className='image-container' 
@@ -306,7 +309,7 @@ function WHOGuidelinesPage() {
               marginBottom: 20
             }}
           />
-           <p style={{textAlign: 'center'}}>If you have fever, cough and difficulty breathing, 
+           <p style={{textAlign: 'center', color: "#063146"}}>If you have fever, cough and difficulty breathing, 
 	   seek medical care immediately.</p>
           </Col>
           <Col md={3}>
@@ -320,14 +323,14 @@ function WHOGuidelinesPage() {
               marginBottom: 20,
             }}
           />
-	   <p style={{textAlign: 'center'}}>Avoid close contact with people who are unwell. Maintain 1 meter or 4 feet distance.</p>
+	   <p style={{textAlign: 'center', color: "#063146"}}>Avoid close contact with people who are unwell. Maintain 1 meter or 4 feet distance.</p>
           </Col>
           </Row>
         </div>
         <div className="ml-5 mr-5">
           <br />
           <hr /> 
-          <i><p style={{ textAlign: 'center', fontSize: 25, fontFamily: 'Arial, sans-serif', marginBottom: 50 }}>"Ultimately, the greatest lesson that COVID-19 can teach humanity is that we are all in this together."</p></i>
+          <i><p style={{ textAlign: 'center', fontSize: 25, fontFamily: 'Arial, sans-serif', marginBottom: 50, color: "#063146" }}>"Ultimately, the greatest lesson that COVID-19 can teach humanity is that we are all in this together."</p></i>
         </div>
       </div>
     </Container>
