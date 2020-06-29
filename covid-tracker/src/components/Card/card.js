@@ -10,65 +10,49 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import news1 from "../../assets/news1.jpg";
-import NewsFetch from "../news";
-import SpacingGrid from './../Grid/grid'
+import './card.styles.css'
 
-function Test() {
-  return (
-    <div style={{ marginBottom: "30px" }}>
-      <center>
-        <h1
-          style={{
-            fontFamily: "Arial, Helvetica, sans-serif",
-            color: "#063146",
-            fontSize: 40,
-          }}
-        >
-          Covid-19 Headlines
-        </h1>
-      </center>
-      <Container className="flex">
-        <Row
-          style={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            flexWrap: "wrap",
-            marginTop: 20,
-          }}
-        >
-          <Col md={3}>
-            <Card>
-              <CardImg top width="100%" src={news1} alt="Covid-19 news" />
+export const NewsCard = props =>
+  <div className='card-container'>
+    {/* <Card>
+              <CardImg top width="100%" src={props.article.urlToImage} alt="Covid-19 news" />
               <CardBody>
-                <CardTitle>
-                  <h5>News Headline</h5>
+                <CardTitle style={{fontSize:'15px'}}>
+                 {props.article.title}
                 </CardTitle>
                 <div className="dropdown-divider"></div>
-                <CardText>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                <CardText style={{fontSize:'10px'}}>
+                  {props.article.description}
                 </CardText>
                 <Button
-                  href="https://www.google.co.in/?gws_rd=ssl"
+                  href={props.article.url}
                   target="blank"
                   style={{ backgroundColor: "#063146", border: 0 }}
                 >
                   Read More
                 </Button>
               </CardBody>
-            </Card>
-          </Col>
-        
-     
-    
-        </Row>
-        
-      </Container>
-      <NewsFetch/>
-      <SpacingGrid/>
+            </Card> */}
+    <img top width="100%" style={{ padding: '0px', borderRadius: '5px' }} src={props.article.urlToImage} alt="Covid-19 news" />
+
+    <div className='content' style={{ padding: '10px' }}>
+      <p style={{ fontFamily: "Arial, Helvetica, sans-serif", align: 'center', fontSize: '15px' }}><e>{props.article.title}</e></p>
+      <hr />
+      <span style={{ fontSize: '10px', color: 'gray' }}>{props.article.publishedAt}</span>
+      <p style={{ fontSize: '10px', color: 'gray' }}>{props.article.author}</p>
+
+      <p style={{ fontSize: '10px' }}>{props.article.content}</p>
+      <span style={{ align: 'right', alignContent: 'bottom' }}>
+        <Button
+          href={props.article.url}
+          target="blank"
+          style={{ backgroundColor: "#063146", marginLeft: '60px' }}
+        >
+          Read More
+                </Button>
+      </span>
     </div>
-  );
-}
-export default Test;
+  </div>
+
+
+

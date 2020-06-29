@@ -1,22 +1,23 @@
 import React from 'react'
+import CardList from './CardList/card-list'
 
 class NewsFetch extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            news:[],
+            articles:[],
             error:null
             
         }
     }
     componentDidMount(){
-        const apiurl='http://newsapi.org/v2/everything?q=covid&from=2020-05-22&sortBy=publishedAt&apiKey=f80c12a5df93415397b30c170713d48e';
+        const apikey=''
+        const apiurl=`https://newsapi.org/v2/everything?q=covid&apiKey=${apikey}`;
         fetch(apiurl)
         .then(res=>res.json())
-        .then(
-            (result)=>{
+        .then((result)=>{
                 this.setState({
-                    news:result.articles
+                    articles:result.articles
                 });
                 console.log(this.state.news)
             },
@@ -29,9 +30,23 @@ class NewsFetch extends React.Component{
 
     render(){
         return(
-            <div>
-                hey there;
-            </div>
+            <>
+                  <center>
+        <h1
+          style={{
+            fontFamily: "Arial, Helvetica, sans-serif",
+            color: "#063146",
+            fontSize: 40,
+            marginTop:'10px'
+          }}
+        >
+          Covid-19 Headlines
+        </h1>
+      </center>
+            
+            <CardList articles={this.state.articles}/>
+            </>
+            
         );
 
     }

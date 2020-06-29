@@ -11,10 +11,7 @@ import {
   Col,
 } from "reactstrap";
 import news1 from "../../assets/news1.jpg";
-import NewsFetch from "../news";
-import SpacingGrid from './../Grid/grid'
 
-import Test from "../Card/card";
 
 function NewsPage() {
   return (
@@ -228,9 +225,6 @@ function NewsPage() {
           </Col>
         </Row>
       </Container>
-      <NewsFetch/>
-      <Test/>
-      <SpacingGrid/>
     </div>
   );
 }
