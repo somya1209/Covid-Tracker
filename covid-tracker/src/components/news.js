@@ -35,13 +35,13 @@ class NewsFetch extends React.Component{
         <h1
           style={{
             fontFamily: "Times New Roman, Times, serif",
-            color: "#EE304C",
+            color: "#063146",
             fontSize: 40,
             marginTop:'10px',
             
           }}
         >
-          <e>COVID-19 HEADLINES</e>
+          <e>COVID-19 Headlines</e>
         </h1>
       </center>
             

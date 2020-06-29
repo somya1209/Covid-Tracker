@@ -46,12 +46,14 @@ const lineChart = (
           label: 'Infected',
           borderColor: 'rgb(102, 255, 102)',
           fill: true,
-        },{
+        },
+        {
           data: dailyData.map((data) => data.recovered),
           label: 'Recovered',
           borderColor: 'rgb(255, 255, 102)',
           fill: true,
-        }, {
+        }, 
+        {
           data: dailyData.map((data) => data.deaths),
           label: 'Deaths',
           borderColor: 'rgb(255, 102, 102)',
@@ -68,7 +70,7 @@ const lineChart = (
     
   
 
-      <Container className="flex" >
+      <Container className="flex"  >
         <Row style={{  display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'center',
@@ -84,11 +86,11 @@ const lineChart = (
               }}
             >
               <CardBody>
-                <CardTitle>Infected</CardTitle>
-                <CardSubtitle>
+                <CardTitle style={{color: "#063146"}}>Infected</CardTitle>
+                <CardSubtitle style={{color: "#063146"}}>
                   <h2>{props.confirmed}</h2>
                 </CardSubtitle>
-                <CardText>
+                <CardText style={{color: "#063146"}}>
                   <p>{new Date().toDateString()}</p>
                   <p>Number of confirmed cases of COVID-19</p>
                 </CardText>
@@ -106,11 +108,11 @@ const lineChart = (
               }}
             >
               <CardBody>
-                <CardTitle>Recovered</CardTitle>
-                <CardSubtitle>
+                <CardTitle style={{color: "#063146"}}>Recovered</CardTitle>
+                <CardSubtitle style={{color: "#063146"}}>
                   <h2>{props.recovered}</h2>
                 </CardSubtitle>
-                <CardText>
+                <CardText style={{color: "#063146"}}>
                   <p>{new Date().toDateString()}</p>
                   <p>Number of recoveries from COVID-19</p>
                 </CardText>
@@ -128,11 +130,11 @@ const lineChart = (
               }}
             >
               <CardBody>
-                <CardTitle>Deaths</CardTitle>
-                <CardSubtitle>
+                <CardTitle style={{color: "#063146"}}>Deaths</CardTitle>
+                <CardSubtitle style={{color: "#063146"}}>
                   <h2>{props.deaths}</h2>
                 </CardSubtitle>
-                <CardText>
+                <CardText style={{color: "#063146"}}>
                   <p>{new Date().toDateString()}</p>
                   <p>Number of deaths caused by COVID-19</p>
                 </CardText>
@@ -142,7 +144,7 @@ const lineChart = (
         </Row>
 <div>
   <br/>
-  <center><h3>Global Data</h3></center>
+  <center><h3 style={{color: "#063146"}}>Global Data</h3></center>
   <br/>
   {lineChart}</div>
        
