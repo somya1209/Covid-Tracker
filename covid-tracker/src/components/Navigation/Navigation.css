@@ -38,7 +38,7 @@
   box-sizing: border-box;
   border-bottom: 1px solid black;
   border-top: 1px solid rgba(255,255,255,.1);
-  transition: .4s;
+  transition: .5s;
 }
 ul li:hover a{
   padding-left: 50px;
@@ -51,7 +51,7 @@ ul li:hover a{
 }
 label #btn,label #cancel{
   position: absolute;
-  background: #ffffff;
+ 
   border-radius: 3px;
   cursor: pointer;
 }
@@ -61,17 +61,20 @@ label #btn{
   font-size: 30px;
   color: #042331;
   padding: 6px 12px;
+  background:white;
   transition: all .5s;
 }
 label #cancel{
   z-index: 1111;
   left: -195px;
+  background:#0a5275;
   top: 17px;
   font-size: 30px;
-  color: #0a5275;
+  color: #042331;
   padding: 4px 9px;
   transition: all .5s ease;
-  margin-left : 50px;
+  margin-left : 40px;
+  
 }
 #check:checked ~ .sidebar{
   left: 0;

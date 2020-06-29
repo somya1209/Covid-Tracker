@@ -33,24 +33,24 @@ export const NewsCard = props =>
                 </Button>
               </CardBody>
             </Card> */}
-    <img top width="100%" style={{ padding: '0px', borderRadius: '5px' }} src={props.article.urlToImage} alt="Covid-19 news" />
+    <img  width="100%" style={{ padding: '0px', borderRadius: '5px' }} src={props.article.urlToImage} alt="Covid-19 news" />
 
-    <div className='content' style={{ padding: '10px' }}>
+    <div className='content' style={{ padding: '10px', height: '100%' }}>
       <p style={{ fontFamily: "Arial, Helvetica, sans-serif", align: 'center', fontSize: '15px' }}><e>{props.article.title}</e></p>
       <hr />
-      <span style={{ fontSize: '10px', color: 'gray' }}>{props.article.publishedAt}</span>
+      <span style={{ fontSize: '10px', color: 'gray'}}>{props.article.publishedAt}</span>
       <p style={{ fontSize: '10px', color: 'gray' }}>{props.article.author}</p>
 
       <p style={{ fontSize: '10px' }}>{props.article.content}</p>
-      <span style={{ align: 'right', alignContent: 'bottom' }}>
+      <div className="btn" >
         <Button
           href={props.article.url}
           target="blank"
-          style={{ backgroundColor: "#063146", marginLeft: '60px' }}
+          style={{ backgroundColor: "#063146", marginLeft: '60px', flexGrow: '1' }}
         >
           Read More
                 </Button>
-      </span>
+      </div>
     </div>
   </div>
 

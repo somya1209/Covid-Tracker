@@ -11,7 +11,7 @@ class NewsFetch extends React.Component{
         }
     }
     componentDidMount(){
-        const apikey=''
+        const apikey='f80c12a5df93415397b30c170713d48e'
         const apiurl=`https://newsapi.org/v2/everything?q=covid&apiKey=${apikey}`;
         fetch(apiurl)
         .then(res=>res.json())
@@ -34,13 +34,14 @@ class NewsFetch extends React.Component{
                   <center>
         <h1
           style={{
-            fontFamily: "Arial, Helvetica, sans-serif",
-            color: "#063146",
+            fontFamily: "Times New Roman, Times, serif",
+            color: "#EE304C",
             fontSize: 40,
-            marginTop:'10px'
+            marginTop:'10px',
+            
           }}
         >
-          Covid-19 Headlines
+          <e>COVID-19 HEADLINES</e>
         </h1>
       </center>
             
