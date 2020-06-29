@@ -15,6 +15,7 @@ import wearmask from "../../assets/mask.jpg";
 import stayinformed from "../../assets/stayInformed.png";
 import chills from "../../assets/chills.jpg";
 import avoidcontact from "../../assets/avoidContact.jpg";
+import '../image-container.css'
 function WHOGuidelinesPage() {
   return (
     <Container className="flex">
@@ -118,7 +119,7 @@ function WHOGuidelinesPage() {
         alignItems: 'center',
         flexWrap: 'wrap',marginTop: 20 }}>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={fever}
             alt="fever"
             style={{
@@ -128,10 +129,10 @@ function WHOGuidelinesPage() {
               marginBottom: 10
             }}
           />
-	   <p style={{textAlign: 'center'}}>Fever</p>
+	   <p  style={{textAlign: 'center'}} >Fever</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={cold}
             alt="cold"
             style={{
@@ -144,7 +145,7 @@ function WHOGuidelinesPage() {
 	   <p style={{textAlign: 'center'}}>Cold</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={headache}
             alt="Headache"
             style={{
@@ -157,7 +158,7 @@ function WHOGuidelinesPage() {
 	   <p style={{textAlign: 'center'}}>Headaches</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={cough}
             alt="Cough"
             style={{
@@ -175,7 +176,7 @@ function WHOGuidelinesPage() {
         alignItems: 'center',
         flexWrap: 'wrap',marginTop: 20 }}>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={fatigue}
             alt="Fatigue"
             style={{
@@ -188,7 +189,7 @@ function WHOGuidelinesPage() {
 	   <p style={{textAlign: 'center'}}>Fatigue</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={naussea}
             alt="Naussea"
             style={{
@@ -201,7 +202,7 @@ function WHOGuidelinesPage() {
            <p style={{textAlign: 'center'}}>Naussea</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={diarrhea}
             alt="Diarrhea"
             style={{
@@ -214,7 +215,7 @@ function WHOGuidelinesPage() {
 	   <p style={{textAlign: 'center'}}>Diarrhea</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={breathing}
             alt="Breathing"
             style={{
@@ -237,7 +238,7 @@ function WHOGuidelinesPage() {
         alignItems: 'center',
         flexWrap: 'wrap',marginTop: 20 }}>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={stayhome}
             alt="Stay Home"
             style={{
@@ -250,7 +251,7 @@ function WHOGuidelinesPage() {
 	   <p style={{textAlign: 'center'}}>Stay Home, Stay Safe. Self isolate from others if you feel unwell.</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={washhands}
             alt="Wash Hands"
             style={{
@@ -264,7 +265,7 @@ function WHOGuidelinesPage() {
 	   for 20 seconds with soap and water</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={wearmask}
             alt="Wear Mask"
             style={{
@@ -282,7 +283,7 @@ function WHOGuidelinesPage() {
         alignItems: 'center',
         flexWrap: 'wrap',marginTop: 20 }}>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={stayinformed}
             alt="Stay Informed"
             style={{
@@ -295,7 +296,7 @@ function WHOGuidelinesPage() {
 	   <p style={{textAlign: 'center'}}>Stay informed and follow the recommended practices.</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={chills}
             alt="Contact doctor if chills"
             style={{
@@ -309,7 +310,7 @@ function WHOGuidelinesPage() {
 	   seek medical care immediately.</p>
           </Col>
           <Col md={3}>
-          <img
+          <img  className='image-container' 
             src={avoidcontact}
             alt="Avoid contact"
             style={{

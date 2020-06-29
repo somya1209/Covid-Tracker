@@ -9,27 +9,29 @@ import NewsPage from '../Pages/NewsPage'
 import GlobeViewPage from '../Pages/GlobeViewPage'
 import NoMatch from '../Pages/NoMatch'
 import image from '../../assets/logo.png'
+import NewsFetch from '../news';
 
 function Navigation() {
     return (
       <div>
       <input type="checkbox" id="check"/>
-      <label for="check">
-        <i class="fa fa-bars" id="btn"></i>
-        <i class="fa fa-times" id="cancel"></i>
+      <label htmlFor="check">
+        <i className="fa fa-bars" id="btn"></i>
+        <i className="fa fa-times" id="cancel"></i>
       </label>
-    <div class="sidebar">
+    <div className="sidebar">
       <header><img
               src={image}
               alt="COVID-19"
               style={{ height: 30, width: 30, position: "relative" }}
             /> Covid-19 Tracker</header>
       <ul>
-      <li><a href="/"><i class="fa fa-home"></i>Home</a></li>
-      <li><a href="/india"><i class="fa fa-map-pin"></i>IndiaLive</a></li>
-      <li><a href="/globe"><i class="fa fa-globe"></i>GlobeView</a></li>
-      <li><a href="/guidelines"><i class="fa fa-info"></i> WHO</a></li>
-      <li><a href="/news"><i class="fa fa-newspaper-o"></i>News</a></li>
+      <li><a href="/"><i className="fa fa-home"></i>Home</a></li>
+      <li><a href="/india"><i className="fa fa-map-pin"></i>IndiaLive</a></li>
+      <li><a href="/globe"><i className="fa fa-globe"></i>GlobeView</a></li>
+      <li><a href="/guidelines"><i className="fa fa-info"></i> WHO</a></li>
+      <li><a href="/news"><i className="fa fa-newspaper-o"></i>News</a></li>
+      <li><a href="/news2"><i className="fa fa-newspaper-o"></i>News2</a></li>
       
   
       </ul>
@@ -43,6 +45,7 @@ function Navigation() {
           <Route exact="true" path="/globe" component={GlobeViewPage} />
           <Route exact="true" path="/guidelines" component={WHOGuidelenes} />
           <Route exact="true" path="/news" component={NewsPage} />
+          <Route  path="/news2" component={NewsFetch} />
           <Route   component={NoMatch} />
         
         </Switch>

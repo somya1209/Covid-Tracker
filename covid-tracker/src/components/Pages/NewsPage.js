@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import news1 from "../../assets/news1.jpg";
 
+
 function NewsPage() {
   return (
     <div style={{ marginBottom: "30px" }}>
