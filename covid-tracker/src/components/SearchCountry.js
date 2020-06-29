@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import './select.styles.css'
+ 
 
 class SearchCountry extends Component {
   render() {
@@ -14,7 +15,8 @@ class SearchCountry extends Component {
             borderRadius: "20px",
             paddingTop: "5px",
             paddingBottom: "5px",
-            paddingLeft: "7px"
+            paddingLeft: "7px",
+            
           }}
         >
           <option>Global</option>
