@@ -50,6 +50,7 @@ function WHOGuidelinesPage() {
               height: "auto",
             }}
           />
+	        </div>
 
           <p
             className="container"
@@ -435,7 +436,6 @@ function WHOGuidelinesPage() {
               is that we are all in this together."
             </p>
           </i>
-        </div>
       </div>
     </Container>
   );
