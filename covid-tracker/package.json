@@ -16,6 +16,7 @@
     "react-number-format": "^4.4.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-table-6": "^6.11.0",
     "reactstrap": "^8.4.1"
   },
   "scripts": {

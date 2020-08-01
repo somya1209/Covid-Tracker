@@ -6,16 +6,16 @@ import WorldDataPage from '../Pages/WorldDataPage'
 import IndiaDtaPage from '../Pages/IndiaDataPage'
 import WHOGuidelenes from '../Pages/WHOGuidelinesPage'
 import NewsPage from '../Pages/NewsPage'
-import GlobeViewPage from '../Pages/GlobeViewPage'
+//import GlobeViewPage from '../Pages/GlobeViewPage'
 import NoMatch from '../Pages/NoMatch'
 import image from '../../assets/logo.png'
 import NewsFetch from '../news';
 
 function Navigation() {
     return (
-      <div>
+      <div >
       <input type="checkbox" id="check"/>
-      <label htmlFor="check">
+      <label htmlFor="check" style={{display: 'flex',justifyContent: 'space-around', flexDirection: 'column'}}>
         <i className="fa fa-bars" id="btn"></i>
         <i className="fa fa-times" id="cancel"></i>
       </label>
@@ -28,7 +28,7 @@ function Navigation() {
       <ul>
       <li><a href="/"><i className="fa fa-home"></i>Home</a></li>
       <li><a href="/india"><i className="fa fa-map-pin"></i>IndiaLive</a></li>
-      <li><a href="/globe"><i className="fa fa-globe"></i>GlobeView</a></li>
+      {/* <li><a href="/globe"><i className="fa fa-globe"></i>GlobeView</a></li> */}
       <li><a href="/guidelines"><i className="fa fa-info"></i> WHO</a></li>
       {/* <li><a href="/news"><i className="fa fa-newspaper-o"></i>News</a></li> */}
       <li><a href="/news2"><i className="fa fa-newspaper-o"></i>News</a></li>
@@ -42,7 +42,7 @@ function Navigation() {
                
           <Route exact="true" path="/" component={WorldDataPage} />
           <Route exact="true" path="/india" component={IndiaDtaPage} />
-          <Route exact="true" path="/globe" component={GlobeViewPage} />
+          {/* <Route exact="true" path="/globe" component={GlobeViewPage} /> */}
           <Route exact="true" path="/guidelines" component={WHOGuidelenes} />
           <Route exact="true" path="/news" component={NewsPage} />
           <Route  path="/news2" component={NewsFetch} />

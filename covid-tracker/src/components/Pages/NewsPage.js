@@ -15,18 +15,23 @@ import news1 from "../../assets/news1.jpg";
 
 function NewsPage() {
   return (
-    <div style={{ marginBottom: "30px" }}>
-      <center>
+        <Container className="container">
+        <div>
+        <div ml-5 mr-5>
+          <br />
         <h1
+        className='container'
           style={{
-            fontFamily: "Arial, Helvetica, sans-serif",
             color: "#063146",
-            fontSize: 40,
+            fontWeight: 600,
+            display: "flex",
+            flexDirection: "column",
+            flexFlow: "column",
+            textAlign: "center",
           }}
         >
           Covid-19 Headlines
         </h1>
-      </center>
       <Container className="flex">
         <Row
           style={{
@@ -226,6 +231,8 @@ function NewsPage() {
         </Row>
       </Container>
     </div>
+    </div>
+    </Container>
   );
 }
 export default NewsPage;
