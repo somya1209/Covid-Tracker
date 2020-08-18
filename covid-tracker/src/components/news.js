@@ -1,6 +1,7 @@
 import React from "react";
 import CardList from "./CardList/card-list";
 import { Container } from "reactstrap";
+import './newsButton.css'
 
 class NewsFetch extends React.Component {
   constructor(props) {
@@ -35,15 +36,17 @@ class NewsFetch extends React.Component {
           <div>
             <div className="ml-5 mr-5">
               <br />
-              <h1
+              <p
                 className="container"
                 style={{
                   textAlign: "center",
-                  color: "#063146",
+                  fontSize:"3vw",
+                  fontFamily: 'Luckiest Guy',
+                  color: "crimson",
                 }}
               >
                 Covid-19 Headlines
-              </h1>
+              </p>
             </div>
           </div>
         </Container>

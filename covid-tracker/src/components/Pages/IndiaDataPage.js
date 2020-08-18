@@ -211,12 +211,15 @@ class IndiaDataPage extends Component {
             <h1
             className='container'
               style={{
-                color: "#063146",
-                fontWeight: 600,
+                
+                fontWeight: 500,
                 display: "flex",
                 flexDirection: "column",
                 flexFlow: "column",
                 textAlign: "center",
+                fontSize:"3vw",
+                fontFamily: 'Luckiest Guy',
+                color: "crimson",
               }}
             >
               India Live

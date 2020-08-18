@@ -28,7 +28,9 @@ function WHOGuidelinesPage() {
           <br />
           <h1
             className="container"
-            style={{ textAlign: "center", color: "#063146" }}
+            style={{ textAlign: "center",   fontSize:"3vw",
+            fontFamily: 'Luckiest Guy',
+            color: "crimson",}}
           >
             COVID-19 Outbreak
           </h1>
