@@ -27,7 +27,7 @@ function Navigation() {
             /> Covid-19 Tracker</header>
       <ul>
       <li><a href="/Covid-Tracker/"><i className="fa fa-home"></i>Home</a></li>
-      <li><a href="/Covid-Tracker/india"><i className="fa fa-map-pin"></i>IndiaLive</a></li>
+      <li><a href="/Covid-Tracker/india/"><i className="fa fa-map-pin"></i>IndiaLive</a></li>
       {/* <li><a href="/globe"><i className="fa fa-globe"></i>GlobeView</a></li> */}
       <li><a href="/Covid-Tracker/guidelines"><i className="fa fa-info"></i> WHO</a></li>
       {/* <li><a href="/news"><i className="fa fa-newspaper-o"></i>News</a></li> */}
@@ -41,7 +41,7 @@ function Navigation() {
       <Switch>
                
           <Route exact="true" path="/Covid-Tracker/" component={WorldDataPage} />
-          <Route exact="true" path="/Covid-Tracker/india" component={IndiaDtaPage} />
+          <Route exact="true" path="/Covid-Tracker/india/" component={IndiaDtaPage} />
           {/* <Route exact="true" path="/globe" component={GlobeViewPage} /> */}
           <Route exact="true" path="/Covid-Tracker/guidelines" component={WHOGuidelenes} />
           <Route exact="true" path="/news" component={NewsPage} />
