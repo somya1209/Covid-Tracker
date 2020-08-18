@@ -26,12 +26,12 @@ function Navigation() {
               style={{ height: 30, width: 30, position: "relative" }}
             /> Covid-19 Tracker</header>
       <ul>
-      <li><a href="/"><i className="fa fa-home"></i>Home</a></li>
-      <li><a href="/india"><i className="fa fa-map-pin"></i>IndiaLive</a></li>
+      <li><a href="/Covid-Tracker/"><i className="fa fa-home"></i>Home</a></li>
+      <li><a href="/Covid-Tracker/india"><i className="fa fa-map-pin"></i>IndiaLive</a></li>
       {/* <li><a href="/globe"><i className="fa fa-globe"></i>GlobeView</a></li> */}
-      <li><a href="/guidelines"><i className="fa fa-info"></i> WHO</a></li>
+      <li><a href="/Covid-Tracker/guidelines"><i className="fa fa-info"></i> WHO</a></li>
       {/* <li><a href="/news"><i className="fa fa-newspaper-o"></i>News</a></li> */}
-      <li><a href="/news2"><i className="fa fa-newspaper-o"></i>News</a></li>
+      <li><a href="/Covid-Tracker/news2"><i className="fa fa-newspaper-o"></i>News</a></li>
       
   
       </ul>
@@ -40,12 +40,12 @@ function Navigation() {
   <Router>
       <Switch>
                
-          <Route exact="true" path="/" component={WorldDataPage} />
-          <Route exact="true" path="/india" component={IndiaDtaPage} />
+          <Route exact="true" path="/Covid-Tracker/" component={WorldDataPage} />
+          <Route exact="true" path="/Covid-Tracker/india" component={IndiaDtaPage} />
           {/* <Route exact="true" path="/globe" component={GlobeViewPage} /> */}
-          <Route exact="true" path="/guidelines" component={WHOGuidelenes} />
+          <Route exact="true" path="/Covid-Tracker/guidelines" component={WHOGuidelenes} />
           <Route exact="true" path="/news" component={NewsPage} />
-          <Route  path="/news2" component={NewsFetch} />
+          <Route  path="/Covid-Tracker/news2" component={NewsFetch} />
           <Route   component={NoMatch} />
         
         </Switch>
