@@ -2,7 +2,7 @@
   "name": "covid-tracker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://somya1209.github.io/covid-tracker",
+  "homepage": "http://somya1209.github.io/Covid-Tracker",
   "dependencies": {
     "@material-ui/core": "^4.10.2",
     "@testing-library/jest-dom": "^4.2.4",
